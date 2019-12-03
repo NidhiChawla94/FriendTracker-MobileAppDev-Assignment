@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.com.friendstracker.login.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_top_margin"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/plus_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/input_height"
+            android:gravity="center"
+            android:text="@string/plus_sign"
+            android:textSize="20sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/country_code_input_layout"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/country_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="@integer/country_code_length"
+                android:text="@string/default_country_code"
+                android:textAlignment="center" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/phone_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:ems="10"
+                android:hint="@string/phone_placeholder"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:text="@string/login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</android.support.constraint.ConstraintLayout>
